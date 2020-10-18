@@ -12,6 +12,8 @@ Html
 
 Google Maps Platform
 
+the project no longer works because no more Google key
+
 # Author 
 Valentin Verveur : https://www.linkedin.com/in/valentin-verveur-a7342b99/ 
 
