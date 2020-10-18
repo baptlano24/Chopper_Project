@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chopper</title>
+  <link rel="stylesheet" href="vue.css" />
+  
+  <script src="http://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+
+<img src="chopper.jpg" border="5"> 
+<h1> Bienvenue sur Chopper</h1>
+		 <p>Entrer sa biere:</p>
+         <p><input type = "text" name = "beer" id = "beer"</p>
+         <p><input type = "submit" value = "submit" id = "submit"/></p>
+ </body>
+ </html>       
+    
+    
+ 
+         
+    
+  <script>
+	  var lon;
+	  var lat;
+	  $("#submit").click(function(){
+		 X =  $("#beer").val();
+		 if ("geolocation" in navigator){
+			 navigator.geolocation.getCurrentPosition(Position);
+			  
+		 }
+				
+		function Position(position){
+			lon = position.coords.longitude;
+			lat = position.coords.latitude;
+			$.ajax({
+			 type:"GET",
+			 url: "http://localhost:5000/geo_find",
+			 dataType :'html',
+			 data:'nom='+X+'&long='+lon+'&lat='+lat+'',
+			 success : function(resp)
+			 {a=5;
+				return resp; }, 
+			 error: function(resultat, statut, erreur){b=0;
+			 }
+				 
+			});
+			return (lon,lat);
+		}
+		 $("#beer").val('');
+		});
+	  
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW0GVTyrOEkMNFjX8AvfEgjP41X75NHb8&callback=initMap"
+    async defer></script>

@@ -1,0 +1,516 @@
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:07:22 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0xbbcdc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3565836)
+spawned uWSGI worker 1 (pid: 3565837, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xbbcdc0 pid: 3565837 (default app)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 3565837)...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/chopper
+closing all non-uwsgi socket fds > 2 (max_fd = 1048576)...
+found fd 3 mapped to socket 0 (127.2.174.177:8100)
+running /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+[uWSGI] getting INI configuration from /home/chopper/admin/config/uwsgi/552231.conf
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:11:14 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 inherited INET address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0x10378c0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 3565836)
+spawned uWSGI worker 1 (pid: 3597423, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+  File "/home/chopper/www/chopper_api/__init__.py", line 97
+    geocode_result = gmaps.geocode(adresse)
+                                          ^
+TabError: inconsistent use of tabs and spaces in indentation
+failed to parse file /home/chopper/www/chopper_api/__init__.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3597423)
+Fri Jan 25 03:11:16 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:11:16 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0x2160dc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3597498)
+spawned uWSGI worker 1 (pid: 3597501, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+  File "/home/chopper/www/chopper_api/__init__.py", line 97
+    geocode_result = gmaps.geocode(adresse)
+                                          ^
+TabError: inconsistent use of tabs and spaces in indentation
+failed to parse file /home/chopper/www/chopper_api/__init__.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3597501)
+Fri Jan 25 03:11:17 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:11:30 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0x1348dc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3599008)
+spawned uWSGI worker 1 (pid: 3599009, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+  File "/home/chopper/www/chopper_api/__init__.py", line 97
+    geocode_result = gmaps.geocode(adresse)
+                                          ^
+TabError: inconsistent use of tabs and spaces in indentation
+failed to parse file /home/chopper/www/chopper_api/__init__.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3599009)
+Fri Jan 25 03:11:31 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:11:36 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0xd62dc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3599307)
+spawned uWSGI worker 1 (pid: 3599308, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+  File "/home/chopper/www/chopper_api/__init__.py", line 97
+    geocode_result = gmaps.geocode(adresse)
+                                          ^
+TabError: inconsistent use of tabs and spaces in indentation
+failed to parse file /home/chopper/www/chopper_api/__init__.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3599308)
+Fri Jan 25 03:11:37 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:25:05 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0x22eedc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3728454)
+spawned uWSGI worker 1 (pid: 3728457, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+  File "/home/chopper/www/chopper_api/__init__.py", line 98
+    try:
+       ^
+TabError: inconsistent use of tabs and spaces in indentation
+failed to parse file /home/chopper/www/chopper_api/__init__.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3728457)
+Fri Jan 25 03:25:06 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:27:42 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0x10b8dc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3749343)
+spawned uWSGI worker 1 (pid: 3749344, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+  File "/home/chopper/www/chopper_api/__init__.py", line 102
+    lat = coord["lat"]
+                     ^
+TabError: inconsistent use of tabs and spaces in indentation
+failed to parse file /home/chopper/www/chopper_api/__init__.py
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3749344)
+Fri Jan 25 03:27:43 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:37:14 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0x1f74dc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3844103)
+spawned uWSGI worker 1 (pid: 3844118, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/chopper/www/chopper_api/__init__.py", line 15, in <module>
+    import pymongo
+ModuleNotFoundError: No module named 'pymongo'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3844118)
+Fri Jan 25 03:37:15 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:47:03 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0x1385dc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3970007)
+spawned uWSGI worker 1 (pid: 3970008, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/chopper/www/chopper_api/__init__.py", line 15, in <module>
+    import pymongo
+ModuleNotFoundError: No module named 'pymongo'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3970008)
+Fri Jan 25 03:47:05 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.
+*** Starting uWSGI 2.0.17.1 (64bit) on [Fri Jan 25 03:49:19 2019] ***
+compiled with version: 4.9.2 on 24 January 2019 07:11:33
+os: Linux-4.14.71-alwaysdata #1 SMP Thu Sep 20 07:08:35 UTC 2018
+nodename: http4
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 12
+current working directory: /home/chopper
+detected binary path: /usr/alwaysdata/uwsgi/2.0.17.1/bin/uwsgi
+*** dumping internal routing table ***
+[rule: 0] action: setremoteaddr:${HTTP_X_REAL_IP}
+*** end of the internal routing table ***
+*** dumping internal response routing table ***
+[rule: 0] subject: ${X_SENDFILE} func: !empty action: fastfile:filename=${X_SENDFILE}
+*** end of the internal response routing table ***
+pulling header X-Sendfile to var X_SENDFILE
+chdir() to /home/chopper/www/chopper_api
+your processes number limit is 257203
+your memory page size is 4096 bytes
+detected max file descriptor number: 1048576
+building mime-types dictionary from file /etc/mime.types...547 entry found
+lock engine: pthread robust mutexes
+thunder lock: enabled
+[busyness] settings: min=10%, max=90%, overload=5, multiplier=10, respawn penalty=2
+[busyness] backlog alert is set to 33 request(s), step is 1
+[busyness] backlog non-zero alert is set to 60 second(s)
+uwsgi socket 0 bound to TCP address 127.2.174.177:8100 fd 3
+Python version: 3.7.1 (default, Oct 22 2018, 08:03:05)  [GCC 4.9.2]
+PEP 405 virtualenv detected: /home/chopper/www/chopper_api/env
+Set PythonHome to /home/chopper/www/chopper_api/env
+Python main interpreter initialized at 0x1145dc0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 2133096 bytes (2083 KB) for 20 cores
+*** Operational MODE: preforking ***
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3998877)
+spawned uWSGI worker 1 (pid: 3998880, cores: 1)
+spawned 1 offload threads for uWSGI worker 1
+Traceback (most recent call last):
+  File "/home/chopper/www/chopper_api/__init__.py", line 15, in <module>
+    import pymongo
+ModuleNotFoundError: No module named 'pymongo'
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. GAME OVER ***
+SIGINT/SIGQUIT received...killing workers...
+OOPS ! failed loading app in worker 1 (pid 3998880)
+Fri Jan 25 03:49:20 2019 - need-app requested, destroying the instance...
+goodbye to uWSGI.

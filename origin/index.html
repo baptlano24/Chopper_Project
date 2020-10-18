@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Index</title>
+    </head>
+
+    <body>
+        <h1>Index</h1>
+          Sommaire :
+          <ul>
+            <li><p><a href="{{ url_for('NBF')}}">Nouvelle biere</a></p></li>
+            <li><p><a href="{{ url_for('SNB')}}">Recherche Biere par nom</a></p></li>
+            <li><p><a href="{{ url_for('SAB')}}">Recherche Biere par Brasserie</a></p></li>
+            <li><p><a href="{{ url_for('STB')}}">Recherche Biere par Type</a></p></li>
+            <li><p><a href="{{ url_for('RBBBA')}}">Recherche Bar par bière et adresse</a></p></li>
+            <li><p><a href="{{ url_for('NBRF')}}">Nouvelle brasserie</a></p></li>
+            <li><p><a href="{{ url_for('SBN')}}">Recherche Brasserie par nom</a></p></li>
+            <li><p><a href="{{ url_for('RBG')}}">Recherche Bars via géo</a></p></li>
+            <li><p><a href="{{ url_for('NBAF')}}">Nouveau Bar</a></p></li>
+            <li><p><a href="{{ url_for('kill_beers')}}">Vider la collection bieres</a></p></li>
+            <li><p><a href="{{ url_for('kill_bars')}}">Vider la collection bar</a></p></li>
+            <li><p><a href="{{ url_for('kill_brass')}}">Vider la collection brass</a></p></li>
+          </ul>
+
+    </body>
+
+</html>

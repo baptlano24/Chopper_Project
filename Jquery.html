@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chopper</title>
+  <link rel="stylesheet" href="vue.css" />
+  
+  <script src="http://code.jquery.com/jquery.js"></script>
+</head>
+<body>
+
+<img src="chopper.jpg" border="5"> 
+<h1> Bienvenue sur Chopper</h1>
+		 <p>Entrer sa biere:</p>
+         <p><input type = "text" name = "beer" id = "beer"</p>
+         <p><input type = "submit" value = "submit" id = "submit"/></p>
+         
+ <div id="div1"> </div>
+ 
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 50%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    
+    <html>
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+	      <div id="map"></div>       
+ </body>
+ 
+ 
+ </html>       
+      
+ <script>
+	  var lon;
+	  var lat;
+	  var text;
+	  var bar;
+	  var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 10
+        });
+        infoWindow = new google.maps.InfoWindow;
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Vous êtes ici.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+	   
+	  $("#submit").click(function(){
+		 document.getElementById('div1').innerHTML = "";
+		 X =  $("#beer").val();
+		 if ("geolocation" in navigator){
+			 navigator.geolocation.getCurrentPosition(Position,error,{ enableHighAccuracy : true, timeout: 5000, maximumAge: 0});
+			  
+		 }
+		function error(){
+			console.warn("Erreur");
+		}
+		function Position(position){
+			lon = position.coords.longitude;
+			lat = position.coords.latitude;
+			$.ajax({type:"GET",url: "../searchbarbybeer",dataType :'html',data:{nom:X, lon:lon, lat:lat},
+			 success : function(resp)
+			 {a=5;
+				
+				var LatLngself = new google.maps.LatLng(lat, lon);
+				var markerself = new google.maps.Marker({position: LatLngself, map : map, icon: 'http://maps.google.com/mapfiles/ms/icons//green-dot.png', title : "Vous êtes ici"});
+				text = JSON.parse(resp);
+				var para = document.querySelector('p');
+				for (var i in text){
+					bar = text[i].Nom + ' Adresse :' + text[i].Adresse + ' Distance : ' + text[i].Distance ;
+					var newDiv = document.createElement("div");
+					newDiv.id = "new";
+					var newContent = document.createTextNode(bar)
+					newDiv.appendChild(newContent);
+					var currentDiv = document.getElementById("div1");
+					document.body.insertBefore(newDiv, currentDiv);
+					console.log(bar);
+					$("#submit").click(function(){
+					document.getElementById('new').innerHTML = "";})
+				}
+				
+				for (var i = 0; i < text.length; i++) {
+					var coords = text[i].Loc;
+					console.log(coords);
+					var latLng = new google.maps.LatLng(coords[1],coords[0]);
+					var marker = new google.maps.Marker({position: latLng,map: map, title: text[i].Nom});
+					}
+				
+				}, 
+			 error: function(resultat, statut, erreur){b=0;
+			 }
+				 
+			});
+			return (lon,lat);
+		}
+		 $("#beer").val('');
+		});
+	  
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW0GVTyrOEkMNFjX8AvfEgjP41X75NHb8&callback=initMap"
+    async defer></script>
